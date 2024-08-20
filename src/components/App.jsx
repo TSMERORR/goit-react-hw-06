@@ -24,13 +24,13 @@ function App() {
     return contactsList;
   });
 
-  useEffect(() => {
-    const isLocalStorageHasData = Boolean(localStorage.getItem('reviews'));
-    if (isLocalStorageHasData) {
-      const data = localStorage.getItem('reviews');
-      setContacts(JSON.parse(data));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const isLocalStorageHasData = Boolean(localStorage.getItem('reviews'));
+  //   if (isLocalStorageHasData) {
+  //     const data = localStorage.getItem('reviews');
+  //     setContacts(JSON.parse(data));
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
